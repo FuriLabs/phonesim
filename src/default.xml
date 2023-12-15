@@ -83,6 +83,9 @@
     <!-- GPRS network registration presentation flag -->
     <set name="GREG" value="0"/>
 
+    <!-- Packet domain event reporting -->
+    <set name="GEREP" value="2"/>
+
     <!-- Mobile phone operator selection mode (0=auto, 1=manual, 2=deregister, 3=set only <format>, 4=manual / automatic) -->
     <set name="OPMODE" value="0"/>
 
@@ -647,6 +650,24 @@
     <set name="GREG" value="*"/>
 </chat>
 
+<chat>
+    <!-- Query Packet domain event reporting -->
+    <command>AT+CGEREP?</command>
+    <response>+CGREG: ${CGEREP}\n\nOK</response>
+</chat>
+
+<chat>
+    <!-- Query Packet domain event reporting capabilities -->
+    <command>AT+CGEREP=?</command>
+    <response>+CGEREP: (0,1,2)\n\nOK</response>
+</chat>
+
+<chat>
+    <!-- Set Packet domain event reporting -->
+    <command>AT+CGEREP=*</command>
+    <response>OK</response>
+    <set name="GEREP" value="*"/>
+</chat>
 
 <!-- ****************** PLMN Selection ***************************** -->
 <chat>
