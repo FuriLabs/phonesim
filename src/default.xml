@@ -3428,6 +3428,12 @@ OK</response>
     <response>OK</response>
 </chat>
 
+<chat>
+    <!-- Query CMUX support -->
+    <command>AT+CMUX=?</command>
+    <response>+CMUX: (0),(0),(5),(1-1509),(1-255),(0-100),(2-255),(1-255),(1-7)\n\nOK</response>
+</chat>
+
 <!-- SIM filesystem definition, based on standard test strings
      presented in GSM 11.10-4.  This is primarily intended for
      testing icon definitions within SIM toolkit applications -->
