@@ -1,0 +1,22 @@
+Source: phonesim
+Section: devel
+Priority: optional
+Maintainer: Bardia Moshiri <bardia@furilabs.com>
+Build-Depends: debhelper-compat (= 13),
+               pkg-config,
+               automake,
+               autoconf,
+               qtdeclarative5-dev,
+Standards-Version: 4.5.6
+
+Package: phonesim
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Modem emulator used by the oFono mobile telephony stack
+ oFono is a stack for mobile telephony devices on Linux.  oFono supports
+ speaking to telephony devices through specific drivers, or with generic
+ AT commands.
+ .
+ Phonesim is a modem emulator that oFono uses for development and testing.
+ This allows oFono to be used by any host without requiring special GSM
+ (or other) hardware.
