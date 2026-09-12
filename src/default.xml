@@ -26,7 +26,7 @@
     <set name="ACMMAX" value="000500"/>
 
     <!-- Price per Unit and Currency -->
-    <set name="PPU" value='GBP","2.66'/>
+    <set name="PPU" value='CAD","0.50'/>
 
     <!-- Battery Capacity
     first value
@@ -45,7 +45,7 @@
     <set name="SQ" value="31,99"/>
 
     <!-- Manufacturer -->
-    <set name="GMI" value="MeeGo"/>
+    <set name="GMI" value="Furi Labs"/>
 
     <!-- Model -->
     <set name="GMM" value="Synthetic Device"/>
@@ -57,7 +57,7 @@
     <set name="GSN" value="1234567890"/>
 
     <!-- SIM card id -->
-    <set name="IMSI" value="246813579"/>
+    <set name="IMSI" value="302720123456789"/>
 
     <!-- Identifier for ATI command -->
     <set name="ID" value="MeeGo Synthetic Phone"/>
@@ -93,53 +93,53 @@
     <set name="OPFORMAT" value="0"/>
 
     <!-- GCF Operator List, format <status(1:available,2:current,3:forbidden)>,"<alphanum.operator name>","<short operator name>","<MCC/MNC num>"-->
-    <set name="OP1" value="T-MeeGo"/>
-    <set name="OP1PLMN" value="23401"/>
+    <set name="OP1" value="Rogers"/>
+    <set name="OP1PLMN" value="302720"/>
     <set name="OP1STATE" value="2"/>
 
-    <set name="OP2" value="Maybe Forbidden Net"/>
-    <set name="OP2PLMN" value="23402"/>
+    <set name="OP2" value="Bell"/>
+    <set name="OP2PLMN" value="302610"/>
     <set name="OP2STATE" value="3"/>
 
-    <set name="OP3" value="Competitor Net"/>
-    <set name="OP3PLMN" value="23403"/>
+    <set name="OP3" value="TELUS"/>
+    <set name="OP3PLMN" value="302220"/>
     <set name="OP3STATE" value="3"/>
 
-    <set name="OP4" value="Blocked Net"/>
-    <set name="OP4PLMN" value="23404"/>
+    <set name="OP4" value="Freedom"/>
+    <set name="OP4PLMN" value="302490"/>
     <set name="OP4STATE" value="3"/>
 
-    <set name="OP5" value="Inaccessible Net"/>
-    <set name="OP5PLMN" value="23405"/>
-    <set name="OP5STATE" value="3"/>
+    <set name="OP5" value="Videotron"/>
+    <set name="OP5PLMN" value="302500"/>
+    <set name="OP5STATE" value="1"/>
 
-    <set name="OP6" value="Phone Net"/>
-    <set name="OP6PLMN" value="23406"/>
+    <set name="OP6" value="Rogers-EXT"/>
+    <set name="OP6PLMN" value="302721"/>
     <set name="OP6STATE" value="1"/>
 
-    <set name="OP7" value="Teleco Net"/>
-    <set name="OP7PLMN" value="24681"/>
+    <set name="OP7" value="SaskTel"/>
+    <set name="OP7PLMN" value="302680"/>
     <set name="OP7STATE" value="1"/>
 
-    <set name="OP8" value="Mobile Net"/>
-    <set name="OP8PLMN" value="24682"/>
+    <set name="OP8" value="Eastlink"/>
+    <set name="OP8PLMN" value="302270"/>
     <set name="OP8STATE" value="1"/>
 
     <set name="OP9" value="IMSI Unknown"/>
-    <set name="OP9PLMN" value="24683"/>
+    <set name="OP9PLMN" value="302999"/>
     <set name="OP9STATE" value="1"/>
 
     <set name="OP10" value="NotAllowed"/>
-    <set name="OP10PLMN" value="24684"/>
+    <set name="OP10PLMN" value="302998"/>
     <set name="OP10STATE" value="1"/>
 
     <set name="OP11" value="NoService"/>
-    <set name="OP11PLMN" value="24685"/>
+    <set name="OP11PLMN" value="302997"/>
     <set name="OP11STATE" value="1"/>
 
     <!-- Preferred Operators -->
-    <set name="PO1" value="1,2,23401"/>
-    <set name="PO2" value="2,2,23402"/>
+    <set name="PO1" value="1,2,302720"/>
+    <set name="PO2" value="2,2,302721"/>
 
     <!-- Name of current mobile phone operator -->
     <set name="OP" value="${OP1}"/>
@@ -184,7 +184,7 @@
     <set name="CF2C1O" value="20"/>
 
     <!-- Service Center Address -->
-    <set name="SCA" value="+15551234567"/>
+    <set name="SCA" value="+14165550100"/>
     <set name="SCAT" value="145"/>
 
     <!-- Fixed Dialling presentation mode -->
@@ -603,7 +603,7 @@
 <chat>
     <!-- Query subscriber number -->
     <command>AT+CNUM</command>
-    <response>+CNUM: ,"+358501234567",145,,4\n\nOK</response>
+    <response>+CNUM: ,"+14165550123",145,,4\n\nOK</response>
 </chat>
 
 <chat>
@@ -691,7 +691,7 @@
 <chat>
     <!-- Query supported operators, always reports -->
     <command>AT+COPS=?</command>
-    <response delay="2000">+COPS: (${OP1STATE},&quot;${OP1}&quot;,&quot;TTAU&quot;,&quot;${OP1PLMN}&quot;,2),(${OP2STATE},&quot;${OP2}&quot;,&quot;MFN&quot;,&quot;${OP2PLMN}&quot;,0),(${OP2STATE},&quot;${OP2}&quot;,&quot;MFN&quot;,&quot;${OP2PLMN}&quot;,2),(${OP3STATE},&quot;${OP3}&quot;,&quot;CNT&quot;,&quot;${OP3PLMN}&quot;),(${OP4STATE},&quot;${OP4}&quot;,&quot;BNT&quot;,&quot;${OP4PLMN}&quot;),(${OP5STATE},&quot;${OP5}&quot;,&quot;INT&quot;,&quot;${OP5PLMN}&quot;),(${OP6STATE},&quot;${OP6}&quot;,&quot;PNT&quot;,&quot;${OP6PLMN}&quot;),(${OP7STATE},&quot;${OP7}&quot;,&quot;TNT&quot;,&quot;${OP7PLMN}&quot;),(${OP8STATE},&quot;${OP8}&quot;,&quot;MNT&quot;,&quot;${OP8PLMN}&quot;),(${OP9STATE},&quot;${OP9}&quot;,&quot;IMSI&quot;,&quot;${OP9PLMN}&quot;),(${OP10STATE},&quot;${OP10}&quot;,&quot;NOT&quot;,&quot;${OP10PLMN}&quot;),(${OP11STATE},&quot;${OP11}&quot;,&quot;SER&quot;,&quot;${OP11PLMN}&quot;),(${OP1STATE},&quot;${OP1}&quot;,&quot;TTAU&quot;,&quot;${OP1PLMN}&quot;,0)\n\nOK</response>
+    <response delay="2000">+COPS: (${OP1STATE},&quot;${OP1}&quot;,&quot;ROGERS&quot;,&quot;${OP1PLMN}&quot;,2),(${OP2STATE},&quot;${OP2}&quot;,&quot;BELL&quot;,&quot;${OP2PLMN}&quot;,0),(${OP2STATE},&quot;${OP2}&quot;,&quot;BELL&quot;,&quot;${OP2PLMN}&quot;,2),(${OP3STATE},&quot;${OP3}&quot;,&quot;TELUS&quot;,&quot;${OP3PLMN}&quot;),(${OP4STATE},&quot;${OP4}&quot;,&quot;FREEDOM&quot;,&quot;${OP4PLMN}&quot;),(${OP5STATE},&quot;${OP5}&quot;,&quot;VIDEOTRON&quot;,&quot;${OP5PLMN}&quot;),(${OP6STATE},&quot;${OP6}&quot;,&quot;ROGERS&quot;,&quot;${OP6PLMN}&quot;),(${OP7STATE},&quot;${OP7}&quot;,&quot;SASKTEL&quot;,&quot;${OP7PLMN}&quot;),(${OP8STATE},&quot;${OP8}&quot;,&quot;EASTLINK&quot;,&quot;${OP8PLMN}&quot;),(${OP9STATE},&quot;${OP9}&quot;,&quot;IMSI&quot;,&quot;${OP9PLMN}&quot;),(${OP10STATE},&quot;${OP10}&quot;,&quot;NOT&quot;,&quot;${OP10PLMN}&quot;),(${OP11STATE},&quot;${OP11}&quot;,&quot;SER&quot;,&quot;${OP11PLMN}&quot;),(${OP1STATE},&quot;${OP1}&quot;,&quot;ROGERS&quot;,&quot;${OP1PLMN}&quot;,0)\n\nOK</response>
 </chat>
 
 <chat>
@@ -2036,19 +2036,117 @@
 <chat>
     <!-- Initiate USSD query that is supported by the network -->
     <command>AT+CUSD=1,"*225#",15</command>
-    <response>+CUSD: 0,"Thank you, your request is being processed. A message will be sent to your phone.",15\n\nOK</response>
+    <response delay="900">+CUSD: 1,"Rogers My Account\n1 Balance and amount due\n2 Data usage\n3 Plan details\n4 Add-ons\n5 Support\nReply with a number.",15\n\nOK</response>
     <set name="USD" value="1"/>
 </chat>
 
 <chat>
-    <!-- USSD answer that is supported by the network -->
-    <command>AT+CUSD=1,"response",15</command>
-    <response>+CUSD: 0,"Thank you.",15\n\nOK</response>
+    <!-- Same interactive menu using a customer-service style code -->
+    <command>AT+CUSD=1,"*611#",15</command>
+    <response delay="900">+CUSD: 1,"Rogers Self Serve\n1 Balance and amount due\n2 Data usage\n3 Plan details\n4 Add-ons\n5 Support\nReply with a number.",15\n\nOK</response>
     <set name="USD" value="1"/>
 </chat>
 
 <chat>
-    <!-- SAT initiated 7-Bit USSD query that is supported by the network -->
+    <!-- Interactive reply: balance -->
+    <command>AT+CUSD=1,"1",15</command>
+    <response delay="650">+CUSD: 0,"Your current balance is $42.17. Amount due: $42.17 on Sep 28. Auto-payment is enabled.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <!-- Interactive reply: data usage -->
+    <command>AT+CUSD=1,"2",15</command>
+    <response delay="650">+CUSD: 0,"Data usage: 18.4 GB of 100 GB used. 81.6 GB remains. Billing cycle resets Sep 28.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <!-- Interactive reply: plan details -->
+    <command>AT+CUSD=1,"3",15</command>
+    <response delay="650">+CUSD: 0,"Plan: Rogers 5G Infinite Premium. Canada-wide talk and text, 100 GB high-speed data, 5G access.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <!-- Interactive reply: add-ons -->
+    <command>AT+CUSD=1,"4",15</command>
+    <response delay="650">+CUSD: 0,"Add-ons: Visual Voicemail active. Roaming Pass inactive. No pending add-on changes.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <!-- Interactive reply: support -->
+    <command>AT+CUSD=1,"5",15</command>
+    <response delay="650">+CUSD: 0,"Rogers support test: call 611 from this device or use MyRogers. This simulator does not place the support call automatically.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"*225*1#",15</command>
+    <response delay="700">+CUSD: 0,"Balance: $42.17. Amount due Sep 28. Auto-payment enabled.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"*225*2#",15</command>
+    <response delay="700">+CUSD: 0,"Data: 18.4 GB of 100 GB used; 81.6 GB remaining until Sep 28.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"*225*3#",15</command>
+    <response delay="700">+CUSD: 0,"Plan: Rogers 5G Infinite Premium; Canada-wide talk/text; 100 GB high-speed data.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"*225*4#",15</command>
+    <response delay="700">+CUSD: 0,"Add-ons: Visual Voicemail active; Roaming Pass inactive.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"*225*5#",15</command>
+    <response delay="700">+CUSD: 0,"Support: dial 611 for customer care. Simulator test response complete.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<!-- Free-form interactive test: prompts for an account PIN. -->
+<chat>
+    <command>AT+CUSD=1,"*555#",15</command>
+    <response delay="800">+CUSD: 1,"Account verification test. Enter the four-digit test PIN.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"1234",15</command>
+    <response delay="600">+CUSD: 0,"PIN accepted. Account ending in 0123 is active and in good standing.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<!-- Free-form interactive test, voucher/top-up style entry. -->
+<chat>
+    <command>AT+CUSD=1,"*777#",15</command>
+    <response delay="800">+CUSD: 1,"Top-up test. Enter the 12-digit test voucher number.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<chat>
+    <command>AT+CUSD=1,"123456789012",15</command>
+    <response delay="600">+CUSD: 0,"Test top-up successful. $25.00 has been added. New simulated balance: $67.17.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<!-- Simple account summary. -->
+<chat>
+    <command>AT+CUSD=1,"*222#",15</command>
+    <response delay="700">+CUSD: 0,"Rogers account active. Line: +1 416-555-0123. Balance: $42.17. Data remaining: 81.6 GB.",15\n\nOK</response>
+    <set name="USD" value="1"/>
+</chat>
+
+<!-- SAT/encoding regression tests retained from the original profile. -->
+<chat>
     <command>AT+CUSD=1,"ABCD",240</command>
     <response>+CUSD: 0,"USSD string received from SS",240\n\nOK</response>
     <set name="USD" value="1"/>
@@ -2071,7 +2169,7 @@
 <chat>
     <!-- Initiate USSD query that is not supported by the network -->
     <command>AT+CUSD=1,"*123#",15</command>
-    <response>+CUSD: 4\n\nOK</response>
+    <response delay="500">+CUSD: 4\n\nOK</response>
     <set name="USD" value="1"/>
 </chat>
 
@@ -2086,7 +2184,7 @@
     <!-- cancel USSD session -->
     <command>AT+CUSD=2</command>
     <response>OK</response>
-    <set name="USD" value="1"/>
+    <set name="USD" value="0"/>
 </chat>
 
 <chat>
